@@ -21,7 +21,7 @@ class UserAdmin(BaseUserAdmin):
         }),
         ('프로필 이미지', {
             'fields': (
-                'img_profile',
+                'profile_img',
             ),
         }),
     )

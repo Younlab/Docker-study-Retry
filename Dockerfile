@@ -1,13 +1,14 @@
 FROM        ubuntu:17.10
 MAINTAINER  younlab.com
 
+
 # update upgrade
-RUN         apt -y update && -y dist-upgrade
+RUN     apt -y update && apt -y dist-upgrade
 
 # install zsh
-RUN         apt -y install zsh curl git vim
+RUN     apt -y install zsh curl git vim
 
-# install oh my zshell
+# install oh my zsh
 RUN     curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
 RUN     chsh -s /usr/bin/zsh
 

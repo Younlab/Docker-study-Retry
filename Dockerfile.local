@@ -1,4 +1,4 @@
-FROM    docker-study:base
+FROM    docker-study-re:base
 
 # 프로젝트 root
 ENV     PROJECT_DIR     /srv/project

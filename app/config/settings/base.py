@@ -14,18 +14,12 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    STATIC_DIR,
-]
 
-MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
-MEDIA_URL = '/media/'
 
 SECRET_ROOT = os.path.join(ROOT_DIR, '.secrets')
 
@@ -35,10 +29,8 @@ SECRET_ROOT = os.path.join(ROOT_DIR, '.secrets')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '$b3j*4m%(9otj*v3%)+#a3(fvi%qvabh^y5wvcz^s8+!(ey9@l'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+
 
 AUTH_USER_MODEL = 'members.User'
 
@@ -85,18 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'config.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Password validation
@@ -135,4 +116,3 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
